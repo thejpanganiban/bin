@@ -1,0 +1,8 @@
+#!/bin/bash
+# A script that runs the following commands:
+#
+#     docker rm $(docker ps -aq)
+#     docker rmi -f $(docker images -qf dangling=true)
+
+docker rm $(docker ps -aq)
+docker rmi -f $(docker images -qf dangling=true)
